@@ -13,4 +13,12 @@ class Problem:
             print(row)
         print()
 
+    def update(self, row, col, val):
+        self.initial_state[row][col] = val
+
+    def checkGoal(self):
+        if self.initial_state == self.goal_State:
+            return True
+        else: 
+            return False
 

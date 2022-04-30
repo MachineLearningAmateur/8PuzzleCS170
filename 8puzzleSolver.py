@@ -31,9 +31,19 @@ def main():
     givenProblem = Problem(eight_puzzle, goal_state)
     givenProblem.printProblem()
 
-    searchAlgo = input('Enter your choice of algorithm\n1. Uniform Cost Search\n2. A* with the Misplaced Tile heuristic\n3. A* with the Euclidean distance heuristic.')
+    algo = int(input("""Enter your choice of algorithm \n
+    1. Uniform Cost Search \n
+    2. A* with the Misplaced Tile heuristic \n
+    3. A* with the Euclidean distance heuristic.\n"""))
 
-
+    while (algo != 1 and algo != 2 and algo != 3):
+        algo = int(input("""Enter your choice of algorithm \n
+    1. Uniform Cost Search \n
+    2. A* with the Misplaced Tile heuristic \n
+    3. A* with the Euclidean distance heuristic.\n"""))
     
-if __name__ == "__main__":
+    solver = SearchAlgo(givenProblem, algo)
+    solver.solve() 
+    
+if __name__ == "__main__": #when interpreter runs this module, it will be set as main and we want main() to be called
     main()
