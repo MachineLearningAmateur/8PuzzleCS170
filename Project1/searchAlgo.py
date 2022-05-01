@@ -2,6 +2,7 @@ from problem import Problem
 from typing import List #to explicitly label list[list] for initial and goal states
 from copy import deepcopy
 import time #used to produce stats for the search algorithms
+import math #used to calculate euclidean distance
 
 
 
@@ -54,11 +55,11 @@ class SearchAlgo:
 
 
         while frontier: #keeps running the loop while frontier is full, we will add a case to terminate loop if goal state is found
+
             #need to sort frontier which has a list of objects 
             #https://www.techiedelight.com/sort-list-of-objects-python/
             #used the link above for inspiration to properly sort a list of objects based on the members
-
-            if (self.algorithm == 1): #for uniform cost search we need the lowest g(n) to be on top of the queue/frontier
+            if (self.algorithm == 1): #for uniform cost search we need the lowest g(n) to be on top of the queue/frontier; technically this line of code is unneeded
                 frontier.sort(key = lambda x : x.depth)
             elif (self.algorithm == 2 or self.algorithm == 3): #for A* we sort by lowest g(n) + h(n)
                 frontier.sort(key = lambda x : x.depth + x.hCost)
@@ -157,8 +158,8 @@ class SearchAlgo:
                     counter += 1
         return counter
         
-    #takes the sum of moves needed to return pieces 1-9 to their goal spot
-    def EuclideanDistance(self, problem : Problem): #also known as manhattan distance according to google
+    #takes the euclidean distance between the position of the number in the goal state compared to that of the position in the initial state
+    def EuclideanDistance(self, problem : Problem): #https://byjus.com/maths/euclidean-distance/
         goal = problem.goal_state
         start = problem.initial_state
         counter = 0
@@ -172,7 +173,7 @@ class SearchAlgo:
                         goalPtrRow, goalPtrCol = row, col
                     if(start[row][col] == val): #once val is found in start state store its position
                         startPtrRow, startPtrCol, = row, col
-            counter += abs(goalPtrRow - startPtrRow) + abs(goalPtrCol - startPtrCol) #take the sum of the difference between row and
+            counter += math.sqrt(math.pow(goalPtrRow - startPtrRow, 2) + math.pow(goalPtrCol - startPtrCol, 2)) #take the sum of the difference between row and
 
         return counter
 
