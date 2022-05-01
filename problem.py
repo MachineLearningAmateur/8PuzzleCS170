@@ -5,7 +5,7 @@ class Problem:
     def __init__(self, initial_state : List[List], goal_state : List[List]):
         self.initial_state = initial_state
         self.goal_state = goal_state
-        self.operators = [1, 0, -1, 0, 1] #ultimate cheat code for matrix traversal
+        self.operators = [1, 0, -1, 0, 1] #ultimate cheat code for matrix traversal - down, left, up, right
         self.start = [0, 0] #starting point
 
     def findStart(self):

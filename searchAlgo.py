@@ -2,7 +2,7 @@ from problem import Problem
 from typing import List #to explicitly label list[list] for initial and goal states
 from copy import deepcopy
 import time #used to produce stats for the search algorithms
-import sys #to terminate program 
+
 
 
 #Node handles the Problem, depth, heuristic cost, and expanded boolean
@@ -26,11 +26,14 @@ class SearchAlgo:
         self._maxNodesQ = 0
         self._depth = 0
         self._nodesExpanded = -1 #-1 to offset the first expansion
-        
+    
+    #to encapsulate our input we just call solve for convenience
     def solve(self):
+        #we want to time our program to terminate after a certain duration
+        startTime = time.time()
         self.graphSearch(self.problem)
 
-    #graph search is our main driver 
+    #graph search is our main driver code to create the frontier and call the expansion function
     def graphSearch(self, problem):
         frontier = [] #frontier will be used as a queue (first in first out)
         visited = set() #a set is best because it prevents duplicates
@@ -41,7 +44,7 @@ class SearchAlgo:
         elif (self.algorithm == 2):
             heuristic = self.MisplacedTileA(problem)
         elif (self.algorithm == 3):
-            heuristic = self.EuclidianDistance(problem)
+            heuristic = self.EuclideanDistance(problem)
         
         state = Node(problem)
         state.hCost = heuristic
@@ -92,16 +95,16 @@ class SearchAlgo:
                         state.hCost = self.MisplacedTileA(state.problem)
                         state.depth = currNode.depth + 1
                     elif (self.algorithm == 3): #euclidean distance case
-                        state.hCost = 0 #need to fix this
+                        state.hCost = self.EuclideanDistance(state.problem)
                         state.depth = currNode.depth + 1
                     
                     frontier.append(state)
                     # state.problem.printProblem()
                     # print(state.problem.start)
                     visited.add(tuple(tuple(row) for row in state.problem.initial_state))
-                    #frontierSize += 1
 
             self._maxNodesQ = max(frontierSize, self._maxNodesQ) #update maxNodesQ is frontierSize is larger than what's currently stored
+
          
 
     
@@ -135,8 +138,6 @@ class SearchAlgo:
             if i ==3:
                 currNode.right = tempNode
 
-            # tempNode.problem.printProblem()
-            # print(tempNode.problem.start)
         #print("domainExpansion")
         return currNode
 
@@ -144,20 +145,36 @@ class SearchAlgo:
         problemCreated = Problem(initial, goal)
         return problemCreated
 
+    #counts the number of misplaced tiles excluding 0 by comparing initial state to goal state
     def MisplacedTileA(self, problem : Problem):
         goal = problem.goal_state
-        puzzle = problem.initial_state #more of current state rather than initial
+        start = problem.initial_state #more of current state rather than initial
         counter = 0
         
-        for row in range(len(puzzle)):
-            for col in range(len(puzzle[0])):
-                if puzzle[row][col] != 0 and puzzle[row][col] != goal[row][col]:
+        for row in range(len(start)):
+            for col in range(len(start[0])):
+                if start[row][col] != 0 and start[row][col] != goal[row][col]: #misplaced refers to instances in which the position of numbers in initial_state do not match with the same position of numbers in goal_state
                     counter += 1
         return counter
-        print("perform A* with the Misplaced Tile heuristic.")
+        
+    #takes the sum of moves needed to return pieces 1-9 to their goal spot
+    def EuclideanDistance(self, problem : Problem): #also known as manhattan distance according to google
+        goal = problem.goal_state
+        start = problem.initial_state
+        counter = 0
+        goalPtrRow, goalPtrCol, startPtrRow, startPtrCol = None, None, None, None
 
-    def EuclidianDistance(self, problem : Problem):
-        print("perform A* with the Euclidean Distance heuristic")
+        #starts from 1 to 8
+        for val in range(1, 9):
+            for row in range(len(start)):
+                for col in range(len(start)):
+                    if (goal[row][col] == val): #once val is found in goal state store its position
+                        goalPtrRow, goalPtrCol = row, col
+                    if(start[row][col] == val): #once val is found in start state store its position
+                        startPtrRow, startPtrCol, = row, col
+            counter += abs(goalPtrRow - startPtrRow) + abs(goalPtrCol - startPtrCol) #take the sum of the difference between row and
+
+        return counter
 
     def results(self):
         print('Goal!!!\n')
