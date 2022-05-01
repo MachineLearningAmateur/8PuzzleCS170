@@ -2,6 +2,7 @@ from problem import Problem
 from typing import List #to explicitly label list[list] for initial and goal states
 from copy import deepcopy
 import time #used to produce stats for the search algorithms
+import sys #to terminate program 
 
 
 #Node handles the Problem, depth, heuristic cost, and expanded boolean
@@ -54,9 +55,10 @@ class SearchAlgo:
             #https://www.techiedelight.com/sort-list-of-objects-python/
             #used the link above for inspiration to properly sort a list of objects based on the members
 
-            if (self.algorithm == 1): #for uniform cost search we need the g(n) to be on top of the queue/frontier
+            if (self.algorithm == 1): #for uniform cost search we need the lowest g(n) to be on top of the queue/frontier
                 frontier.sort(key = lambda x : x.depth)
-                #print('UFC')
+            elif (self.algorithm == 2 or self.algorithm == 3): #for A* we sort by lowest g(n) + h(n)
+                frontier.sort(key = lambda x : x.depth + x.hCost)
 
             currNode = frontier.pop(0) #access the top of the queue or end of the list since python does not have a queue data structure
             frontierSize = len(frontier) #update size of frontier
@@ -73,21 +75,21 @@ class SearchAlgo:
             if self._nodesExpanded != 0:
                 print(f'The best state to expand with a g(n) = {currNode.depth} and h(n) = {currNode.hCost} is...\n')
                 currNode.problem.printProblem()
-                print(currNode.problem.start)
+                #print(currNode.problem.start)
             else:
                 currNode.problem.printProblem()
             
             currNode = self.domainExpansion(currNode, visited) #time to expand the states for the given state
-            print(len(visited))
+            #print(len(visited))
             #check to see if the states expanded are visited or not
             for state in [currNode.top, currNode.bot, currNode.left, currNode.right]:
-                print(state)
+                #print(state)
                 if state: #if state = None it would return false
                     if (self.algorithm == 1): #ufc case
                         state.hCost = 0
                         state.depth = currNode.depth + 1
                     elif (self.algorithm == 2): #misplaced case
-                        state.hCost = 0 #need to fix this
+                        state.hCost = self.MisplacedTileA(state.problem)
                         state.depth = currNode.depth + 1
                     elif (self.algorithm == 3): #euclidean distance case
                         state.hCost = 0 #need to fix this
@@ -119,7 +121,7 @@ class SearchAlgo:
             #if the initial state already exists in visited we just skip it
             checker = tuple(tuple(row) for row in tempPuzzle.initial_state)
             if checker in visited:
-                print('seen!')
+                #print('seen!')
                 continue
             tempPuzzle.findStart()
             tempNode = Node(tempPuzzle)
@@ -133,9 +135,9 @@ class SearchAlgo:
             if i ==3:
                 currNode.right = tempNode
 
-            tempNode.problem.printProblem()
-            print(tempNode.problem.start)
-        print("domainExpansion")
+            # tempNode.problem.printProblem()
+            # print(tempNode.problem.start)
+        #print("domainExpansion")
         return currNode
 
     def createProblem(self, initial : List[List], goal : List[List]):
@@ -143,13 +145,22 @@ class SearchAlgo:
         return problemCreated
 
     def MisplacedTileA(self, problem : Problem):
+        goal = problem.goal_state
+        puzzle = problem.initial_state #more of current state rather than initial
+        counter = 0
+        
+        for row in range(len(puzzle)):
+            for col in range(len(puzzle[0])):
+                if puzzle[row][col] != 0 and puzzle[row][col] != goal[row][col]:
+                    counter += 1
+        return counter
         print("perform A* with the Misplaced Tile heuristic.")
 
     def EuclidianDistance(self, problem : Problem):
         print("perform A* with the Euclidean Distance heuristic")
 
     def results(self):
-        print('Goal!!\n')
+        print('Goal!!!\n')
         print(f'To solve this problem the search algorithm expanded a total of {self._nodesExpanded} nodes.')
         print(f'The maximum number of nodes in the queue at any one time: {self._maxNodesQ}.')
         print(f'The depth of the goal node was {self._depth}.')

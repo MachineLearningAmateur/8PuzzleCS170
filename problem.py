@@ -23,8 +23,8 @@ class Problem:
 
     def update(self, row1, col1, row2, col2):
         #swaps the val at row1, col1 with the val at row2, col2 vice versa
-        print(self.initial_state[row1][col1])
-        print(self.initial_state[row2][col2])
+        # print(self.initial_state[row1][col1])
+        # print(self.initial_state[row2][col2])
         self.initial_state[row1][col1], self.initial_state[row2][col2] = self.initial_state[row2][col2], self.initial_state[row1][col1]
 
     def checkGoal(self):
