@@ -32,6 +32,10 @@ class SearchAlgo:
     def solve(self):
         #we want to time our program to terminate after a certain duration
         startTime = time.time()
+        
+        #https://stackoverflow.com/questions/2769061/how-to-erase-the-file-contents-of-text-file-in-python
+        with open('tracedStates.txt', 'r+') as f:
+            f.truncate(0) # need '0' when using r+
         self.graphSearch(self.problem)
 
     #graph search is our main driver code to create the frontier and call the expansion function
