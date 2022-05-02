@@ -65,3 +65,7 @@ Max Nodes in Queue: 591
 Depth of Goal Node: 22
 
 
+
+Nodes Expanded: 3
+Max Nodes in Queue: 7
+Depth of Goal Node: 3

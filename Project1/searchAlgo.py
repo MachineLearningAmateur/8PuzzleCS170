@@ -1,7 +1,6 @@
 from problem import Problem
 from typing import List #to explicitly label list[list] for initial and goal states
 from copy import deepcopy
-import time #used to produce stats for the search algorithms
 import math #used to calculate euclidean distance
 import os #used to check if file exists
 
@@ -40,9 +39,6 @@ class SearchAlgo:
     
     #to encapsulate our input we just call solve for convenience
     def solve(self):
-        #we want to time our program to terminate after a certain duration
-        startTime = time.time()
-
         #https://stackoverflow.com/questions/2769061/how-to-erase-the-file-contents-of-text-file-in-python
         if os.path.isfile('tracedStates.txt'):
             with open('tracedStates.txt', 'r+') as f:
