@@ -42,7 +42,7 @@ Nodes Expanded: 9105
 Max Nodes in Queue: 5051
 Depth of Goal Node: 22
 
-Euclidean Distance
+Euclidean Distance Heuristic
 
 Nodes Expanded: 1
 Max Nodes in Queue: 1
