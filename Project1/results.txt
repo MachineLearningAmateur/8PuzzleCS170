@@ -1,0 +1,65 @@
+Uniform Cost Search
+
+Nodes Expanded: 1
+Max Nodes in Queue: 1
+Depth of Goal Node: 0
+
+Nodes Expanded: 4
+Max Nodes in Queue: 6
+Depth of Goal Node: 1
+
+Nodes Expanded: 5
+Max Nodes in Queue: 5
+Depth of Goal Node: 2
+
+Nodes Expanded: 30
+Max Nodes in Queue: 19
+Depth of Goal Node: 4
+
+Nodes Expanded: 91121
+Max Nodes in Queue: 24984
+Depth of Goal Node: 22
+
+Misplaced Tile Heuristic
+
+Nodes Expanded: 1
+Max Nodes in Queue: 1
+Depth of Goal Node: 0
+
+Nodes Expanded: 2
+Max Nodes in Queue: 3
+Depth of Goal Node: 1
+
+Nodes Expanded: 3
+Max Nodes in Queue: 4
+Depth of Goal Node: 2
+
+Nodes Expanded: 5
+Max Nodes in Queue: 5
+Depth of Goal Node: 4
+
+Nodes Expanded: 9105
+Max Nodes in Queue: 5051
+Depth of Goal Node: 22
+
+Euclidean Distance
+
+Nodes Expanded: 1
+Max Nodes in Queue: 1
+Depth of Goal Node: 0
+
+Nodes Expanded: 2
+Max Nodes in Queue: 3
+Depth of Goal Node: 1
+
+Nodes Expanded: 3
+Max Nodes in Queue: 4
+Depth of Goal Node: 2
+
+Nodes Expanded: 5
+Max Nodes in Queue: 5
+Depth of Goal Node: 4
+
+Nodes Expanded: 1060
+Max Nodes in Queue: 591
+Depth of Goal Node: 22

@@ -32,7 +32,7 @@ class SearchAlgo:
     def solve(self):
         #we want to time our program to terminate after a certain duration
         startTime = time.time()
-        
+
         #https://stackoverflow.com/questions/2769061/how-to-erase-the-file-contents-of-text-file-in-python
         with open('tracedStates.txt', 'r+') as f:
             f.truncate(0) # need '0' when using r+
@@ -68,12 +68,9 @@ class SearchAlgo:
             elif (self.algorithm == 2 or self.algorithm == 3): #for A* we sort by lowest g(n) + h(n)
                 frontier.sort(key = lambda x : x.depth + x.hCost)
 
-            currNode = frontier.pop(0) #access the top of the queue or end of the list since python does not have a queue data structure
-
-            if currNode.problem.checkGoal():
-                self._depth = currNode.depth
-                self.results()
-                return
+            frontierSize = len(frontier)
+            self._maxNodesQ = max(frontierSize, self._maxNodesQ)
+            currNode = frontier.pop(0) #access the top of the queue or end of the list since python does not have a queue data structure 
 
             self.traceStates(currNode)
             # if self._nodesExpanded != 0: #we don't have a best state at 0
@@ -82,9 +79,15 @@ class SearchAlgo:
             #     #print(currNode.problem.start)
             # else:
             #     currNode.problem.printProblem()
+
+            if currNode.problem.checkGoal():
+                self._depth = currNode.depth
+                self.results()
+                return
             
             currNode = self.domainExpansion(currNode, visited) #time to expand the states for the given state
             self._nodesExpanded += 1 #add 1 to count whenever we call domainExpansion
+                
             #print(len(visited))
             #check to see if the states are valid, and if valid we update their hcost and depth values
             for state in [currNode.top, currNode.bot, currNode.left, currNode.right]:
@@ -192,6 +195,12 @@ class SearchAlgo:
             + f'To solve this problem the search algorithm expanded a total of {self._nodesExpanded} nodes.\n' 
             + f'The maximum number of nodes in the queue at any one time: {self._maxNodesQ}.\n' 
             + f'The depth of the goal node was {self._depth}.')
+        
+        with open('results.txt', 'a') as file:
+            file.write('\n')
+            file.write(f'Nodes Expanded: {self._nodesExpanded}\n')
+            file.write(f'Max Nodes in Queue: {self._maxNodesQ}\n')
+            file.write(f'Depth of Goal Node: {self._depth}\n')
     
     def traceStates(self, currNode):
         with open('tracedStates.txt', 'a') as file:
