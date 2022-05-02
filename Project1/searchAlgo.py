@@ -13,7 +13,7 @@ class Node:
         self.problem = problem  
         self.depth = 0
         self.hCost = 0
-        self.expanded = False
+  
         self.top = None
         self.bot = None
         self.left = None
@@ -26,7 +26,7 @@ class SearchAlgo:
         self.algorithm = int(algorithm)
         self._maxNodesQ = 0
         self._depth = 0
-        self._nodesExpanded = -1 #-1 to offset the first expansion
+        self._nodesExpanded = 0 #-1 to offset the first expansion
     
     #to encapsulate our input we just call solve for convenience
     def solve(self):
@@ -65,18 +65,13 @@ class SearchAlgo:
                 frontier.sort(key = lambda x : x.depth + x.hCost)
 
             currNode = frontier.pop(0) #access the top of the queue or end of the list since python does not have a queue data structure
-            frontierSize = len(frontier) #update size of frontier
+
             if currNode.problem.checkGoal():
                 self._depth = currNode.depth
                 self.results()
                 return
 
-            if not currNode.expanded:
-                self._nodesExpanded += 1 #add 1 cause we will expand this node
-                currNode.expanded = True #make sure it's true so we won't expand a state that has already been explored
-                
-
-            if self._nodesExpanded != 0:
+            if self._nodesExpanded != 0: #we don't have a best state at 0
                 print(f'The best state to expand with a g(n) = {currNode.depth} and h(n) = {currNode.hCost} is...\n')
                 currNode.problem.printProblem()
                 #print(currNode.problem.start)
@@ -84,8 +79,9 @@ class SearchAlgo:
                 currNode.problem.printProblem()
             
             currNode = self.domainExpansion(currNode, visited) #time to expand the states for the given state
+            self._nodesExpanded += 1 #add 1 to count whenever we call domainExpansion
             #print(len(visited))
-            #check to see if the states expanded are visited or not
+            #check to see if the states are valid, and if valid we update their hcost and depth values
             for state in [currNode.top, currNode.bot, currNode.left, currNode.right]:
                 #print(state)
                 if state: #if state = None it would return false
@@ -104,7 +100,8 @@ class SearchAlgo:
                     # print(state.problem.start)
                     visited.add(tuple(tuple(row) for row in state.problem.initial_state))
 
-            self._maxNodesQ = max(frontierSize, self._maxNodesQ) #update maxNodesQ is frontierSize is larger than what's currently stored
+            frontierSize = len(frontier) #update size of frontier 
+            self._maxNodesQ = max(frontierSize, self._maxNodesQ) #update maxNodesQ if frontierSize is larger than what's currently stored
 
          
 
@@ -154,8 +151,9 @@ class SearchAlgo:
         
         for row in range(len(start)):
             for col in range(len(start[0])):
-                if start[row][col] != 0 and start[row][col] != goal[row][col]: #misplaced refers to instances in which the position of numbers in initial_state do not match with the same position of numbers in goal_state
+                if start[row][col] != 0 and start[row][col] != goal[row][col]: 
                     counter += 1
+        #misplaced refers to instances in which the position of numbers in initial_state do not match with the same position of numbers in goal_state
         return counter
         
     #takes the euclidean distance between the position of the number in the goal state compared to that of the position in the initial state
@@ -173,7 +171,8 @@ class SearchAlgo:
                         goalPtrRow, goalPtrCol = row, col
                     if(start[row][col] == val): #once val is found in start state store its position
                         startPtrRow, startPtrCol, = row, col
-            counter += math.sqrt(math.pow(goalPtrRow - startPtrRow, 2) + math.pow(goalPtrCol - startPtrCol, 2)) #take the sum of the difference between row and
+            #counter is the sum of the total distance between each val in initial to their respective val in goal
+            counter += math.sqrt(math.pow(goalPtrRow - startPtrRow, 2) + math.pow(goalPtrCol - startPtrCol, 2)) 
 
         return counter
 
