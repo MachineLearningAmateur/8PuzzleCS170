@@ -3,6 +3,7 @@ from typing import List #to explicitly label list[list] for initial and goal sta
 from copy import deepcopy
 import time #used to produce stats for the search algorithms
 import math #used to calculate euclidean distance
+import os #used to check if file exists
 
 
 
@@ -13,12 +14,21 @@ class Node:
         self.problem = problem  
         self.depth = 0
         self.hCost = 0
-  
+
+        self.parent = None #to store solution path
         self.top = None
         self.bot = None
         self.left = None
         self.right = None
-
+    
+    def traceSolPath(self):
+        lst = []
+        temp = self
+        while temp:
+            lst.insert(0,temp)
+            temp = temp.parent
+        return lst
+    
 class SearchAlgo:
     def __init__(self, problem : Problem, algorithm : str):
         #_ is used to emulate private variables
@@ -34,8 +44,9 @@ class SearchAlgo:
         startTime = time.time()
 
         #https://stackoverflow.com/questions/2769061/how-to-erase-the-file-contents-of-text-file-in-python
-        with open('tracedStates.txt', 'r+') as f:
-            f.truncate(0) # need '0' when using r+
+        if os.path.isfile('tracedStates.txt'):
+            with open('tracedStates.txt', 'r+') as f:
+                f.truncate(0) # need '0' when using r+
         self.graphSearch(self.problem)
 
     #graph search is our main driver code to create the frontier and call the expansion function
@@ -83,6 +94,7 @@ class SearchAlgo:
             if currNode.problem.checkGoal():
                 self._depth = currNode.depth
                 self.results()
+                self.printSol(currNode)
                 return
             
             currNode = self.domainExpansion(currNode, visited) #time to expand the states for the given state
@@ -134,7 +146,8 @@ class SearchAlgo:
                 continue
             tempPuzzle.findStart()
             tempNode = Node(tempPuzzle)
-            
+            tempNode.parent = currNode
+
             if i == 0:
                 currNode.bot = tempNode
             if i == 1:
@@ -143,7 +156,7 @@ class SearchAlgo:
                 currNode.top = tempNode
             if i ==3:
                 currNode.right = tempNode
-
+            
         #print("domainExpansion")
         return currNode
 
@@ -219,4 +232,25 @@ class SearchAlgo:
                 for row in currNode.problem.initial_state:
                     file.write(str(row) + '\n')
                 file.write('\n')
+    
+    def printSol(self, currNode):
+        sol = currNode.traceSolPath()
+            # print(sol)
+            # print(len(sol))
+        if os.path.isfile('solutionPath.txt'):
+            with open('solutionPath.txt', 'r+') as f:
+                f.truncate(0) # need '0' when using r+
 
+        with open('solutionPath.txt', 'a') as file:
+            file.write('Solution Path\n')
+            #print('\nSolution Path\n')
+            for node in range(len(sol)):
+                file.write('Step ' + str(node + 1) + '.\n')
+                #print(str(node + 1) + '. ')
+                if node == len(sol) - 1:
+                    file.write('Goal reached!\n')
+                    #print("Goal Reached!\n")
+                for row in sol[node].problem.initial_state:
+                    file.write(str(row) + '\n')
+                file.write('\n')
+                    # sol[node].problem.printProblem()
