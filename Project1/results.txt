@@ -1,6 +1,6 @@
 Uniform Cost Search
 
-Nodes Expanded: 1
+Nodes Expanded: 0
 Max Nodes in Queue: 1
 Depth of Goal Node: 0
 
@@ -22,7 +22,7 @@ Depth of Goal Node: 22
 
 Misplaced Tile Heuristic
 
-Nodes Expanded: 1
+Nodes Expanded: 0
 Max Nodes in Queue: 1
 Depth of Goal Node: 0
 
@@ -44,7 +44,7 @@ Depth of Goal Node: 22
 
 Euclidean Distance Heuristic
 
-Nodes Expanded: 1
+Nodes Expanded: 0
 Max Nodes in Queue: 1
 Depth of Goal Node: 0
 
