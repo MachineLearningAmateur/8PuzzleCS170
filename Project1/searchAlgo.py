@@ -71,12 +71,13 @@ class SearchAlgo:
                 self.results()
                 return
 
-            if self._nodesExpanded != 0: #we don't have a best state at 0
-                print(f'The best state to expand with a g(n) = {currNode.depth} and h(n) = {currNode.hCost} is...\n')
-                currNode.problem.printProblem()
-                #print(currNode.problem.start)
-            else:
-                currNode.problem.printProblem()
+            self.traceStates(currNode)
+            # if self._nodesExpanded != 0: #we don't have a best state at 0
+            #     print(f'The best state to expand with a g(n) = {currNode.depth} and h(n) = {currNode.hCost} is...\n')
+            #     currNode.problem.printProblem()
+            #     #print(currNode.problem.start)
+            # else:
+            #     currNode.problem.printProblem()
             
             currNode = self.domainExpansion(currNode, visited) #time to expand the states for the given state
             self._nodesExpanded += 1 #add 1 to count whenever we call domainExpansion
@@ -181,4 +182,28 @@ class SearchAlgo:
         print(f'To solve this problem the search algorithm expanded a total of {self._nodesExpanded} nodes.')
         print(f'The maximum number of nodes in the queue at any one time: {self._maxNodesQ}.')
         print(f'The depth of the goal node was {self._depth}.')
+
+        with open('tracedStates.txt', 'a') as file:
+            file.write('Goal!!!\n' 
+            + f'To solve this problem the search algorithm expanded a total of {self._nodesExpanded} nodes.\n' 
+            + f'The maximum number of nodes in the queue at any one time: {self._maxNodesQ}.\n' 
+            + f'The depth of the goal node was {self._depth}.')
+    
+    def traceStates(self, currNode):
+        with open('tracedStates.txt', 'a') as file:
+
+            if self._nodesExpanded != 0: #we don't have a best state at 0
+                file.write(f'The best state to expand with a g(n) = {currNode.depth} and h(n) = {currNode.hCost} is...\n')
+                file.write('Expanding state:\n\n')
+                for row in currNode.problem.initial_state:
+                    file.write(str(row) + '\n')
+                file.write('\n')
+                print(f'The best state to expand with a g(n) = {currNode.depth} and h(n) = {currNode.hCost} is...\n')
+                currNode.problem.printProblem()
+            
+            else:
+                file.write('Expanding state:\n\n')
+                for row in currNode.problem.initial_state:
+                    file.write(str(row) + '\n')
+                file.write('\n')
 

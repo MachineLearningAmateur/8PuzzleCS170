@@ -1,0 +1,955 @@
+Expanding state:
+
+[1, 2, 3]
+[4, 0, 5]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 1 and h(n) = 4.23606797749979 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 5, 0]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 1 and h(n) = 5.650281539872885 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 7, 5]
+[6, 0, 8]
+
+The best state to expand with a g(n) = 2 and h(n) = 4.650281539872885 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 5, 8]
+[6, 7, 0]
+
+The best state to expand with a g(n) = 2 and h(n) = 4.650281539872885 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 7, 5]
+[6, 8, 0]
+
+The best state to expand with a g(n) = 2 and h(n) = 4.82842712474619 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 7, 5]
+[0, 6, 8]
+
+The best state to expand with a g(n) = 1 and h(n) = 6.23606797749979 is...
+Expanding state:
+
+[1, 0, 3]
+[4, 2, 5]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 1 and h(n) = 6.23606797749979 is...
+Expanding state:
+
+[1, 2, 3]
+[0, 4, 5]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 2 and h(n) = 5.23606797749979 is...
+Expanding state:
+
+[1, 2, 0]
+[4, 5, 3]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 2 and h(n) = 5.23606797749979 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 0, 5]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 2 and h(n) = 6.0 is...
+Expanding state:
+
+[1, 2, 3]
+[6, 4, 5]
+[0, 7, 8]
+
+The best state to expand with a g(n) = 3 and h(n) = 5.0 is...
+Expanding state:
+
+[1, 2, 3]
+[6, 4, 5]
+[7, 0, 8]
+
+The best state to expand with a g(n) = 4 and h(n) = 4.0 is...
+Expanding state:
+
+[1, 2, 3]
+[6, 4, 5]
+[7, 8, 0]
+
+The best state to expand with a g(n) = 3 and h(n) = 5.06449510224598 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 7, 0]
+[6, 8, 5]
+
+The best state to expand with a g(n) = 3 and h(n) = 5.650281539872885 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 5, 8]
+[6, 0, 7]
+
+The best state to expand with a g(n) = 3 and h(n) = 5.82842712474619 is...
+Expanding state:
+
+[1, 2, 3]
+[0, 7, 5]
+[4, 6, 8]
+
+The best state to expand with a g(n) = 4 and h(n) = 4.82842712474619 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 5, 8]
+[0, 6, 7]
+
+The best state to expand with a g(n) = 2 and h(n) = 7.23606797749979 is...
+Expanding state:
+
+[0, 1, 3]
+[4, 2, 5]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 2 and h(n) = 7.23606797749979 is...
+Expanding state:
+
+[1, 3, 0]
+[4, 2, 5]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 2 and h(n) = 7.23606797749979 is...
+Expanding state:
+
+[0, 2, 3]
+[1, 4, 5]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 3 and h(n) = 6.23606797749979 is...
+Expanding state:
+
+[1, 0, 2]
+[4, 5, 3]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 4 and h(n) = 5.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[6, 0, 5]
+[7, 4, 8]
+
+The best state to expand with a g(n) = 5 and h(n) = 4.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[6, 4, 0]
+[7, 8, 5]
+
+The best state to expand with a g(n) = 4 and h(n) = 5.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[7, 0, 5]
+[4, 6, 8]
+
+The best state to expand with a g(n) = 5 and h(n) = 4.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[0, 6, 5]
+[7, 4, 8]
+
+The best state to expand with a g(n) = 5 and h(n) = 4.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[6, 5, 0]
+[7, 4, 8]
+
+The best state to expand with a g(n) = 5 and h(n) = 4.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[7, 5, 0]
+[4, 6, 8]
+
+The best state to expand with a g(n) = 4 and h(n) = 5.8863495173726745 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 0, 7]
+[6, 8, 5]
+
+The best state to expand with a g(n) = 5 and h(n) = 5.0 is...
+Expanding state:
+
+[1, 2, 3]
+[7, 6, 5]
+[4, 0, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 4.0 is...
+Expanding state:
+
+[1, 2, 3]
+[7, 6, 5]
+[4, 8, 0]
+
+The best state to expand with a g(n) = 4 and h(n) = 6.06449510224598 is...
+Expanding state:
+
+[1, 2, 0]
+[4, 7, 3]
+[6, 8, 5]
+
+The best state to expand with a g(n) = 4 and h(n) = 6.650281539872885 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 0, 8]
+[6, 5, 7]
+
+The best state to expand with a g(n) = 3 and h(n) = 7.650281539872885 is...
+Expanding state:
+
+[1, 3, 5]
+[4, 2, 0]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 4 and h(n) = 6.82842712474619 is...
+Expanding state:
+
+[0, 2, 3]
+[1, 7, 5]
+[4, 6, 8]
+
+The best state to expand with a g(n) = 5 and h(n) = 5.82842712474619 is...
+Expanding state:
+
+[1, 2, 3]
+[0, 5, 8]
+[4, 6, 7]
+
+The best state to expand with a g(n) = 6 and h(n) = 4.82842712474619 is...
+Expanding state:
+
+[1, 2, 3]
+[6, 5, 8]
+[7, 4, 0]
+
+The best state to expand with a g(n) = 6 and h(n) = 4.82842712474619 is...
+Expanding state:
+
+[1, 2, 3]
+[7, 5, 8]
+[4, 6, 0]
+
+The best state to expand with a g(n) = 3 and h(n) = 8.23606797749979 is...
+Expanding state:
+
+[4, 1, 3]
+[0, 2, 5]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 3 and h(n) = 8.23606797749979 is...
+Expanding state:
+
+[2, 0, 3]
+[1, 4, 5]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 4 and h(n) = 7.23606797749979 is...
+Expanding state:
+
+[1, 5, 2]
+[4, 0, 3]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 4 and h(n) = 7.23606797749979 is...
+Expanding state:
+
+[0, 1, 2]
+[4, 5, 3]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 5 and h(n) = 6.23606797749979 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 8, 0]
+[6, 5, 7]
+
+The best state to expand with a g(n) = 5 and h(n) = 6.414213562373095 is...
+Expanding state:
+
+[1, 0, 3]
+[6, 2, 5]
+[7, 4, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 5.414213562373095 is...
+Expanding state:
+
+[1, 2, 0]
+[6, 4, 3]
+[7, 8, 5]
+
+The best state to expand with a g(n) = 6 and h(n) = 5.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[6, 0, 4]
+[7, 8, 5]
+
+The best state to expand with a g(n) = 5 and h(n) = 6.414213562373095 is...
+Expanding state:
+
+[1, 0, 3]
+[7, 2, 5]
+[4, 6, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 5.414213562373095 is...
+Expanding state:
+
+[0, 2, 3]
+[1, 6, 5]
+[7, 4, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 5.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[7, 6, 5]
+[0, 4, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 5.414213562373095 is...
+Expanding state:
+
+[1, 2, 0]
+[6, 5, 3]
+[7, 4, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 5.414213562373095 is...
+Expanding state:
+
+[1, 2, 0]
+[7, 5, 3]
+[4, 6, 8]
+
+The best state to expand with a g(n) = 7 and h(n) = 4.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[7, 6, 0]
+[4, 8, 5]
+
+The best state to expand with a g(n) = 7 and h(n) = 4.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[7, 5, 8]
+[4, 0, 6]
+
+The best state to expand with a g(n) = 7 and h(n) = 4.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[0, 6, 4]
+[7, 8, 5]
+
+The best state to expand with a g(n) = 8 and h(n) = 3.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[7, 0, 6]
+[4, 8, 5]
+
+The best state to expand with a g(n) = 5 and h(n) = 6.8863495173726745 is...
+Expanding state:
+
+[1, 0, 3]
+[4, 2, 7]
+[6, 8, 5]
+
+The best state to expand with a g(n) = 5 and h(n) = 6.8863495173726745 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 8, 7]
+[6, 0, 5]
+
+The best state to expand with a g(n) = 5 and h(n) = 6.8863495173726745 is...
+Expanding state:
+
+[1, 2, 3]
+[0, 4, 7]
+[6, 8, 5]
+
+The best state to expand with a g(n) = 4 and h(n) = 8.0 is...
+Expanding state:
+
+[4, 1, 3]
+[6, 2, 5]
+[0, 7, 8]
+
+The best state to expand with a g(n) = 5 and h(n) = 7.0 is...
+Expanding state:
+
+[4, 1, 3]
+[6, 2, 5]
+[7, 0, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 6.0 is...
+Expanding state:
+
+[4, 1, 3]
+[6, 2, 5]
+[7, 8, 0]
+
+The best state to expand with a g(n) = 5 and h(n) = 7.06449510224598 is...
+Expanding state:
+
+[1, 0, 2]
+[4, 7, 3]
+[6, 8, 5]
+
+The best state to expand with a g(n) = 4 and h(n) = 8.06449510224598 is...
+Expanding state:
+
+[1, 3, 5]
+[4, 2, 8]
+[6, 7, 0]
+
+The best state to expand with a g(n) = 4 and h(n) = 8.06449510224598 is...
+Expanding state:
+
+[1, 3, 5]
+[4, 0, 2]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 6.06449510224598 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 8, 7]
+[0, 6, 5]
+
+The best state to expand with a g(n) = 6 and h(n) = 6.47213595499958 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 8, 7]
+[6, 5, 0]
+
+The best state to expand with a g(n) = 5 and h(n) = 7.650281539872885 is...
+Expanding state:
+
+[1, 0, 3]
+[4, 2, 8]
+[6, 5, 7]
+
+The best state to expand with a g(n) = 5 and h(n) = 7.650281539872885 is...
+Expanding state:
+
+[1, 2, 3]
+[0, 4, 8]
+[6, 5, 7]
+
+The best state to expand with a g(n) = 7 and h(n) = 5.650281539872885 is...
+Expanding state:
+
+[1, 2, 3]
+[6, 5, 8]
+[7, 0, 4]
+
+The best state to expand with a g(n) = 4 and h(n) = 8.650281539872886 is...
+Expanding state:
+
+[4, 1, 3]
+[2, 0, 5]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 4 and h(n) = 8.650281539872886 is...
+Expanding state:
+
+[2, 4, 3]
+[1, 0, 5]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 5 and h(n) = 7.650281539872885 is...
+Expanding state:
+
+[1, 5, 2]
+[4, 7, 3]
+[6, 0, 8]
+
+The best state to expand with a g(n) = 5 and h(n) = 7.650281539872885 is...
+Expanding state:
+
+[1, 5, 2]
+[4, 3, 0]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 6.650281539872885 is...
+Expanding state:
+
+[1, 2, 3]
+[6, 4, 7]
+[0, 8, 5]
+
+The best state to expand with a g(n) = 5 and h(n) = 7.650281539872885 is...
+Expanding state:
+
+[4, 1, 3]
+[2, 5, 0]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 5 and h(n) = 7.650281539872885 is...
+Expanding state:
+
+[2, 4, 3]
+[1, 5, 0]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 6.650281539872885 is...
+Expanding state:
+
+[1, 5, 2]
+[4, 7, 3]
+[6, 8, 0]
+
+The best state to expand with a g(n) = 5 and h(n) = 7.82842712474619 is...
+Expanding state:
+
+[2, 0, 3]
+[1, 7, 5]
+[4, 6, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 6.82842712474619 is...
+Expanding state:
+
+[0, 2, 3]
+[1, 5, 8]
+[4, 6, 7]
+
+The best state to expand with a g(n) = 6 and h(n) = 6.82842712474619 is...
+Expanding state:
+
+[1, 2, 3]
+[5, 0, 8]
+[4, 6, 7]
+
+The best state to expand with a g(n) = 8 and h(n) = 4.82842712474619 is...
+Expanding state:
+
+[1, 2, 3]
+[7, 5, 8]
+[0, 4, 6]
+
+The best state to expand with a g(n) = 9 and h(n) = 3.82842712474619 is...
+Expanding state:
+
+[1, 2, 3]
+[0, 7, 6]
+[4, 8, 5]
+
+The best state to expand with a g(n) = 6 and h(n) = 6.82842712474619 is...
+Expanding state:
+
+[1, 5, 2]
+[4, 7, 3]
+[0, 6, 8]
+
+The best state to expand with a g(n) = 9 and h(n) = 3.82842712474619 is...
+Expanding state:
+
+[1, 2, 3]
+[0, 5, 8]
+[7, 4, 6]
+
+The best state to expand with a g(n) = 10 and h(n) = 2.8284271247461903 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 7, 6]
+[0, 8, 5]
+
+The best state to expand with a g(n) = 4 and h(n) = 9.23606797749979 is...
+Expanding state:
+
+[2, 3, 0]
+[1, 4, 5]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 5 and h(n) = 8.23606797749979 is...
+Expanding state:
+
+[1, 5, 2]
+[0, 4, 3]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 5 and h(n) = 8.23606797749979 is...
+Expanding state:
+
+[4, 1, 2]
+[0, 5, 3]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 7.23606797749979 is...
+Expanding state:
+
+[1, 2, 0]
+[4, 8, 3]
+[6, 5, 7]
+
+The best state to expand with a g(n) = 6 and h(n) = 7.414213562373095 is...
+Expanding state:
+
+[0, 1, 3]
+[6, 2, 5]
+[7, 4, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 7.414213562373095 is...
+Expanding state:
+
+[1, 3, 0]
+[6, 2, 5]
+[7, 4, 8]
+
+The best state to expand with a g(n) = 7 and h(n) = 6.414213562373095 is...
+Expanding state:
+
+[1, 0, 2]
+[6, 4, 3]
+[7, 8, 5]
+
+The best state to expand with a g(n) = 7 and h(n) = 6.414213562373095 is...
+Expanding state:
+
+[1, 0, 3]
+[6, 2, 4]
+[7, 8, 5]
+
+The best state to expand with a g(n) = 7 and h(n) = 6.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[6, 8, 4]
+[7, 0, 5]
+
+The best state to expand with a g(n) = 6 and h(n) = 7.414213562373095 is...
+Expanding state:
+
+[0, 1, 3]
+[7, 2, 5]
+[4, 6, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 7.414213562373095 is...
+Expanding state:
+
+[1, 3, 0]
+[7, 2, 5]
+[4, 6, 8]
+
+The best state to expand with a g(n) = 7 and h(n) = 6.414213562373095 is...
+Expanding state:
+
+[2, 0, 3]
+[1, 6, 5]
+[7, 4, 8]
+
+The best state to expand with a g(n) = 7 and h(n) = 6.414213562373095 is...
+Expanding state:
+
+[1, 0, 2]
+[6, 5, 3]
+[7, 4, 8]
+
+The best state to expand with a g(n) = 7 and h(n) = 6.414213562373095 is...
+Expanding state:
+
+[1, 0, 2]
+[7, 5, 3]
+[4, 6, 8]
+
+The best state to expand with a g(n) = 8 and h(n) = 5.414213562373095 is...
+Expanding state:
+
+[1, 2, 0]
+[7, 6, 3]
+[4, 8, 5]
+
+The best state to expand with a g(n) = 8 and h(n) = 5.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[7, 0, 8]
+[4, 5, 6]
+
+The best state to expand with a g(n) = 8 and h(n) = 5.414213562373095 is...
+Expanding state:
+
+[0, 2, 3]
+[1, 6, 4]
+[7, 8, 5]
+
+The best state to expand with a g(n) = 8 and h(n) = 5.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[7, 6, 4]
+[0, 8, 5]
+
+The best state to expand with a g(n) = 9 and h(n) = 4.414213562373095 is...
+Expanding state:
+
+[1, 0, 3]
+[7, 2, 6]
+[4, 8, 5]
+
+The best state to expand with a g(n) = 9 and h(n) = 4.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[7, 8, 6]
+[4, 0, 5]
+
+The best state to expand with a g(n) = 7 and h(n) = 6.414213562373095 is...
+Expanding state:
+
+[4, 1, 3]
+[6, 2, 0]
+[7, 8, 5]
+
+The best state to expand with a g(n) = 6 and h(n) = 7.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[6, 4, 8]
+[0, 5, 7]
+
+The best state to expand with a g(n) = 7 and h(n) = 6.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[5, 6, 8]
+[4, 0, 7]
+
+The best state to expand with a g(n) = 7 and h(n) = 6.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[5, 8, 0]
+[4, 6, 7]
+
+The best state to expand with a g(n) = 8 and h(n) = 5.414213562373095 is...
+Expanding state:
+
+[1, 2, 3]
+[5, 6, 8]
+[4, 7, 0]
+
+The best state to expand with a g(n) = 5 and h(n) = 8.478708664619074 is...
+Expanding state:
+
+[1, 3, 5]
+[4, 7, 2]
+[6, 0, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 7.478708664619075 is...
+Expanding state:
+
+[1, 3, 5]
+[4, 7, 2]
+[6, 8, 0]
+
+The best state to expand with a g(n) = 5 and h(n) = 8.478708664619075 is...
+Expanding state:
+
+[1, 0, 5]
+[4, 3, 2]
+[6, 7, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 7.65685424949238 is...
+Expanding state:
+
+[1, 3, 5]
+[4, 7, 2]
+[0, 6, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 7.8863495173726745 is...
+Expanding state:
+
+[0, 1, 3]
+[4, 2, 7]
+[6, 8, 5]
+
+The best state to expand with a g(n) = 6 and h(n) = 7.8863495173726745 is...
+Expanding state:
+
+[1, 3, 0]
+[4, 2, 7]
+[6, 8, 5]
+
+The best state to expand with a g(n) = 6 and h(n) = 7.8863495173726745 is...
+Expanding state:
+
+[0, 2, 3]
+[1, 4, 7]
+[6, 8, 5]
+
+The best state to expand with a g(n) = 6 and h(n) = 7.8863495173726745 is...
+Expanding state:
+
+[1, 7, 2]
+[4, 0, 3]
+[6, 8, 5]
+
+The best state to expand with a g(n) = 6 and h(n) = 8.0 is...
+Expanding state:
+
+[4, 1, 3]
+[6, 0, 5]
+[7, 2, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 8.0 is...
+Expanding state:
+
+[1, 5, 2]
+[6, 4, 3]
+[0, 7, 8]
+
+The best state to expand with a g(n) = 6 and h(n) = 8.0 is...
+Expanding state:
+
+[4, 1, 2]
+[6, 5, 3]
+[0, 7, 8]
+
+The best state to expand with a g(n) = 8 and h(n) = 6.0 is...
+Expanding state:
+
+[1, 2, 3]
+[6, 8, 4]
+[7, 5, 0]
+
+The best state to expand with a g(n) = 9 and h(n) = 5.0 is...
+Expanding state:
+
+[1, 2, 3]
+[7, 8, 0]
+[4, 5, 6]
+
+The best state to expand with a g(n) = 10 and h(n) = 4.0 is...
+Expanding state:
+
+[1, 2, 3]
+[7, 8, 6]
+[4, 5, 0]
+
+The best state to expand with a g(n) = 9 and h(n) = 5.0 is...
+Expanding state:
+
+[1, 2, 3]
+[5, 6, 0]
+[4, 7, 8]
+
+The best state to expand with a g(n) = 7 and h(n) = 7.0 is...
+Expanding state:
+
+[4, 1, 3]
+[0, 6, 5]
+[7, 2, 8]
+
+The best state to expand with a g(n) = 7 and h(n) = 7.0 is...
+Expanding state:
+
+[4, 1, 3]
+[6, 5, 0]
+[7, 2, 8]
+
+The best state to expand with a g(n) = 7 and h(n) = 7.0 is...
+Expanding state:
+
+[1, 5, 2]
+[6, 4, 3]
+[7, 0, 8]
+
+The best state to expand with a g(n) = 7 and h(n) = 7.0 is...
+Expanding state:
+
+[4, 1, 2]
+[6, 5, 3]
+[7, 0, 8]
+
+The best state to expand with a g(n) = 10 and h(n) = 4.0 is...
+Expanding state:
+
+[1, 2, 3]
+[5, 0, 6]
+[4, 7, 8]
+
+The best state to expand with a g(n) = 8 and h(n) = 6.0 is...
+Expanding state:
+
+[0, 1, 3]
+[4, 6, 5]
+[7, 2, 8]
+
+The best state to expand with a g(n) = 8 and h(n) = 6.0 is...
+Expanding state:
+
+[1, 5, 2]
+[6, 4, 3]
+[7, 8, 0]
+
+The best state to expand with a g(n) = 8 and h(n) = 6.0 is...
+Expanding state:
+
+[4, 1, 2]
+[6, 5, 3]
+[7, 8, 0]
+
+The best state to expand with a g(n) = 11 and h(n) = 3.0 is...
+Expanding state:
+
+[1, 2, 3]
+[0, 5, 6]
+[4, 7, 8]
+
+The best state to expand with a g(n) = 9 and h(n) = 5.0 is...
+Expanding state:
+
+[1, 0, 3]
+[4, 6, 5]
+[7, 2, 8]
+
+The best state to expand with a g(n) = 12 and h(n) = 2.0 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 5, 6]
+[0, 7, 8]
+
+The best state to expand with a g(n) = 13 and h(n) = 1.0 is...
+Expanding state:
+
+[1, 2, 3]
+[4, 5, 6]
+[7, 0, 8]
+
+Goal!!!
+To solve this problem the search algorithm expanded a total of 136 nodes.
+The maximum number of nodes in the queue at any one time: 89.
+The depth of the goal node was 14.
