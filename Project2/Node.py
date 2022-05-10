@@ -8,10 +8,10 @@ class Node:
         self.accuracy = round(accuracy, 2)
         print(f'Using feature(s) {self.subset} is {self.accuracy}%')
 
-    def addToSet(self, val):
+    def addToSet(self, val): #for forward selection
         self.subset.add(val)
 
-    def removeFromSet(self, val):
+    def removeFromSet(self, val): #for backward selection
         self.subset.remove(val)
 
     def displayBest(self):

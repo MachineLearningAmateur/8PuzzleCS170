@@ -18,7 +18,7 @@ class GreedyAlgs:
         elif self.algorithm == 2:
             self.backward_selection()
         else:
-            print('Personal Algorithm')
+            self.personal_alg()
         return
 
     def dummyEval(self, node : Node): 
@@ -62,7 +62,7 @@ class GreedyAlgs:
 
         for to_iterate in range(self.features - 1): #-1 because we did a check for the full set already
             self.bwAccuracy = 0 
-            wFeature = None
+            bFeature = None
             for subset in range(1, self.features + 1):
                 if subset in self.fSet:
                     currNode = Node(copy.deepcopy(self.fSet))
@@ -71,13 +71,12 @@ class GreedyAlgs:
                     currNode.displayResults(accuracy)
                     if (self.bwAccuracy < accuracy):
                         self.bwAccuracy = accuracy
-                        wFeature = currNode
+                        bFeature = currNode
                         bwSet = subset
             print()
-            wFeature.displayBest()
+            bFeature.displayBest()
             self.fSet.remove(bwSet)
-            self.bSubsets[wFeature.accuracy] = copy.deepcopy(self.fSet) #use accuracy to store as key and the value is the best subset for current iteration
-        print(self.bSubsets)
+            self.bSubsets[bFeature.accuracy] = bFeature.subset #use accuracy to store as key and the value is the best subset for current iteration
         print(f'Finished Search!!! The best feature subset is {self.bSubsets[max(self.bSubsets.keys())]}, which has an ' + \
             f'accuracy of {max(self.bSubsets.keys())}%')
 
