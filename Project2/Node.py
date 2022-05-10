@@ -4,11 +4,15 @@ class Node:
         self.accuracy = None
 
     def displayResults(self, accuracy : float):
+        #https://www.w3schools.com/python/ref_func_round.asp
         self.accuracy = round(accuracy, 2)
         print(f'Using feature(s) {self.subset} is {self.accuracy}%')
 
     def addToSet(self, val):
         self.subset.add(val)
+
+    def removeFromSet(self, val):
+        self.subset.remove(val)
 
     def displayBest(self):
         print(f'Feature set {self.subset} was best, accuracy is {self.accuracy}%\n')
