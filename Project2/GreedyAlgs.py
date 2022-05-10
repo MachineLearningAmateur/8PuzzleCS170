@@ -16,7 +16,7 @@ class GreedyAlgs:
         if self.algorithm == 1:
             self.forward_selection()
         elif self.algorithm == 2:
-            self.backward_selection()
+            self.backward_elimination()
         else:
             self.personal_alg()
         return
@@ -44,13 +44,22 @@ class GreedyAlgs:
             print()
             bFeature.displayBest()
             self.fSet.add(bwSet)
+            decreasedAcc = False 
+            for key in self.bSubsets.keys(): #check to see if best accuracy has decreased
+                if (bFeature.accuracy < key):
+                    decreasedAcc = True
+                    break
+            if (decreasedAcc):
+                print('(Warning, accuracy has decreased!)')
+                break
             self.bSubsets[bFeature.accuracy] = bFeature.subset #use accuracy to store as key and the value is the best subset for current iteration
+            
         #use max to find the highest accuracy within the keys of bSubsets
         print(f'Finished Search!!! The best feature subset is {self.bSubsets[max(self.bSubsets.keys())]}, which has an ' + \
             f'accuracy of {max(self.bSubsets.keys())}%')
 
-    def backward_selection(self): #backward selection starts with a populated set
-        print('Do backward selection.')
+    def backward_elimination(self): #backward selection starts with a populated set
+        #print('Do backward elimination.')
         for set in range(1, self.features + 1): #populate the set with the given number of features
             self.fSet.add(set)
         
@@ -76,7 +85,16 @@ class GreedyAlgs:
             print()
             bFeature.displayBest()
             self.fSet.remove(bwSet)
+            decreasedAcc = False
+            for key in self.bSubsets.keys(): #check to see if best accuracy has decreased
+                if (bFeature.accuracy < key):
+                    decreasedAcc = True
+                    break
+            if (decreasedAcc):
+                print('(Warning, accuracy has decreased!)')
+                break
             self.bSubsets[bFeature.accuracy] = bFeature.subset #use accuracy to store as key and the value is the best subset for current iteration
+
         print(f'Finished Search!!! The best feature subset is {self.bSubsets[max(self.bSubsets.keys())]}, which has an ' + \
             f'accuracy of {max(self.bSubsets.keys())}%')
 

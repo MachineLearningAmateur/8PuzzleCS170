@@ -1,6 +1,6 @@
 class Node:
     def __init__(self, subset):
-        self.subset = subset #tracks the visited/seen features; starts off as an empty set
+        self.subset = subset #stores the current subset
         self.accuracy = None
 
     def displayResults(self, accuracy : float):
