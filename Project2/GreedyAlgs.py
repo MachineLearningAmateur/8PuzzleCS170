@@ -6,7 +6,7 @@ class GreedyAlgs:
     def __init__(self, features : int, algorithm : int):
         self.features = features
         self.algorithm = algorithm
-        self.bwAccuracy = None #best or worst accuracy in n features
+        self.bAccuracy = None #best accuracy in n features
         self.fSet = set() #empty feature set for best feature set
         self.bSubsets = {} #empty dictionary for best subsets found 
         self.bwSet = -1 #
@@ -29,7 +29,7 @@ class GreedyAlgs:
     def forward_selection(self): #forward selection starts with an empty set
         # print('Do forward selection.')
         for to_iterate in range(self.features): #just need to iterate n times, where n = number of features
-            self.bwAccuracy = 0
+            self.bAccuracy = 0
             bFeature = None
             for subset in range(1, self.features + 1): #start from 1 to the number of features present
                 if subset not in self.fSet: #checks to see if we made the subset already ~ if we did, then skip
@@ -37,8 +37,8 @@ class GreedyAlgs:
                     currNode.addToSet(subset)
                     accuracy = self.dummyEval(currNode)
                     currNode.displayResults(accuracy)
-                    if (self.bwAccuracy < accuracy): #checks if current accuracy is better than bwAccuracy (basically checking for max)
-                        self.bwAccuracy = accuracy
+                    if (self.bAccuracy < accuracy): #checks if current accuracy is better than bAccuracy (basically checking for max)
+                        self.bAccuracy = accuracy
                         bFeature = currNode
                         bwSet = subset
             print()
@@ -61,7 +61,7 @@ class GreedyAlgs:
         self.bSubsets[currNode.accuracy] = currNode.subset
 
         for to_iterate in range(self.features - 1): #-1 because we did a check for the full set already
-            self.bwAccuracy = 0 
+            self.bAccuracy = 0 
             bFeature = None
             for subset in range(1, self.features + 1):
                 if subset in self.fSet:
@@ -69,8 +69,8 @@ class GreedyAlgs:
                     currNode.removeFromSet(subset)
                     accuracy = self.dummyEval(currNode)
                     currNode.displayResults(accuracy)
-                    if (self.bwAccuracy < accuracy):
-                        self.bwAccuracy = accuracy
+                    if (self.bAccuracy < accuracy):
+                        self.bAccuracy = accuracy
                         bFeature = currNode
                         bwSet = subset
             print()
