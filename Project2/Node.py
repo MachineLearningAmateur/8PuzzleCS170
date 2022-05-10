@@ -1,4 +1,14 @@
 class Node:
-    def __init__(self):
-        self.visited = set() #tracks the visited/seen features; starts off as an empty set
-        
+    def __init__(self, subset):
+        self.subset = subset #tracks the visited/seen features; starts off as an empty set
+        self.accuracy = None
+
+    def displayResults(self, accuracy : float):
+        self.accuracy = round(accuracy, 2)
+        print(f'Using feature(s) {self.subset} is {self.accuracy}%')
+
+    def addToSet(self, val):
+        self.subset.add(val)
+
+    def displayBest(self):
+        print(f'Feature set {self.subset} was best, accuracy is {self.accuracy}%\n')
