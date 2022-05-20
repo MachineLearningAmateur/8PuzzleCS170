@@ -73,6 +73,7 @@ class GreedyAlgs:
                     decreasedAcc = True
                     break
             if (decreasedAcc):
+                self.trace('(Warning, accuracy has decreased!)', None)
                 print('(Warning, accuracy has decreased!)')
                 break
             self.bSubsets[bFeature.accuracy] = bFeature.subset #use accuracy to store as key and the value is the best subset for current iteration
@@ -85,29 +86,36 @@ class GreedyAlgs:
 
     def backward_elimination(self): #backward selection starts with a populated set
         #print('Do backward elimination.')
+        total = time.time()
+        start = time.time()
         for set in range(1, self.features + 1): #populate the set with the given number of features
             self.fSet.add(set)
         
         currNode = Node(copy.deepcopy(self.fSet))
         accuracy = self.evaluate(currNode)
+        self.trace(currNode.displayResults(accuracy), None)
         print(currNode.displayResults(accuracy))
+        self.trace(currNode.displayBest(), start)
         print(currNode.displayBest())
         self.bSubsets[currNode.accuracy] = currNode.subset
 
         for to_iterate in range(self.features - 1): #-1 because we did a check for the full set already
             self.bAccuracy = -1 
+            start = time.time()
             bFeature = None
             for subset in range(1, self.features + 1):
                 if subset in self.fSet:
                     currNode = Node(copy.deepcopy(self.fSet))
                     currNode.removeFromSet(subset)
                     accuracy = self.evaluate(currNode)
+                    self.trace(currNode.displayResults(accuracy), None)
                     print(currNode.displayResults(accuracy))
                     if (self.bAccuracy < accuracy):
                         self.bAccuracy = accuracy
                         bFeature = currNode
                         bwSet = subset
             print()
+            self.trace(bFeature.displayBest(), start)
             print(bFeature.displayBest())
             self.fSet.remove(bwSet)
             decreasedAcc = False
@@ -116,10 +124,12 @@ class GreedyAlgs:
                     decreasedAcc = True
                     break
             if (decreasedAcc):
+                self.trace('(Warning, accuracy has decreased!)', None)
                 print('(Warning, accuracy has decreased!)')
                 break
             self.bSubsets[bFeature.accuracy] = bFeature.subset #use accuracy to store as key and the value is the best subset for current iteration
-
+        self.trace(f'Finished Search!!! The best feature subset is {self.bSubsets[max(self.bSubsets.keys())]}, which has an ' + \
+            f'accuracy of {max(self.bSubsets.keys()) * 100}%', total)
         print(f'Finished Search!!! The best feature subset is {self.bSubsets[max(self.bSubsets.keys())]}, which has an ' + \
             f'accuracy of {max(self.bSubsets.keys()) * 100}%')
 
