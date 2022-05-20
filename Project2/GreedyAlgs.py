@@ -1,18 +1,29 @@
 import copy #import copy to use deepcopy since Python arguments are pass by reference
 import numpy as np #imports np for random generator
 from Node import Node #imports the Node class
+from Classifier import Classifier
+from Validator import Validator
 
 class GreedyAlgs:
-    def __init__(self, features : int, algorithm : int):
-        self.features = features
+    def __init__(self, fileName : int, algorithm : int):
+        self.fileName = fileName
+        self.features = 0
         self.algorithm = algorithm
         self.bAccuracy = None #best accuracy in n features
         self.fSet = set() #empty feature set for best feature set
         self.bSubsets = {} #empty dictionary for best subsets found 
-        self.bwSet = -1 #
+        self.bwSet = -1 
+        self.classifier = None
+        self.validator = None
 
     def begin(self):
         print("Beginning Search.\n")
+        #set up the classifier by passing in the fileName
+        self.classifier = Classifier(self.fileName)
+        self.classifier.train()
+
+        self.features = self.classifier.features
+        
         if self.algorithm == 1:
             self.forward_selection()
         elif self.algorithm == 2:
