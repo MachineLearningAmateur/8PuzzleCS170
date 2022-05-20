@@ -1,0 +1,31 @@
+Using feature(s) {1} is 56.99999999999999%
+Using feature(s) {2} is 54.0%
+Using feature(s) {3} is 68.0%
+Using feature(s) {4} is 65.0%
+Using feature(s) {5} is 75.0%
+Using feature(s) {6} is 61.0%
+Using feature(s) {7} is 62.0%
+Using feature(s) {8} is 60.0%
+Using feature(s) {9} is 66.0%
+Using feature(s) {10} is 64.0%
+Feature set {10} was best, accuracy is 64.0% | step finished in 0.6927142143249512 seconds.
+Using feature(s) {1, 5} is 76.0%
+Using feature(s) {2, 5} is 80.0%
+Using feature(s) {3, 5} is 92.0%
+Using feature(s) {4, 5} is 75.0%
+Using feature(s) {5, 6} is 79.0%
+Using feature(s) {5, 7} is 80.0%
+Using feature(s) {8, 5} is 77.0%
+Using feature(s) {9, 5} is 73.0%
+Using feature(s) {10, 5} is 83.0%
+Feature set {10, 5} was best, accuracy is 83.0% | step finished in 0.6558892726898193 seconds.
+Using feature(s) {1, 3, 5} is 84.0%
+Using feature(s) {2, 3, 5} is 79.0%
+Using feature(s) {3, 4, 5} is 84.0%
+Using feature(s) {3, 5, 6} is 82.0%
+Using feature(s) {3, 5, 7} is 89.0%
+Using feature(s) {8, 3, 5} is 79.0%
+Using feature(s) {9, 3, 5} is 83.0%
+Using feature(s) {10, 3, 5} is 87.0%
+Feature set {10, 3, 5} was best, accuracy is 87.0% | step finished in 0.6152076721191406 seconds.
+Finished Search!!! The best feature subset is {3, 5}, which has an accuracy of 92.0% | step finished in 1.9667961597442627 seconds.

@@ -6,7 +6,7 @@ class Node:
     def displayResults(self, accuracy : float):
         #https://www.w3schools.com/python/ref_func_round.asp
         self.accuracy = round(accuracy, 2)
-        print(f'Using feature(s) {self.subset} is {self.accuracy}%')
+        return (f'Using feature(s) {self.subset} is {self.accuracy * 100}%')
 
     def addToSet(self, val): #for forward selection
         self.subset.add(val)
@@ -15,4 +15,4 @@ class Node:
         self.subset.remove(val)
 
     def displayBest(self):
-        print(f'Feature set {self.subset} was best, accuracy is {self.accuracy}%\n')
+        return (f'Feature set {self.subset} was best, accuracy is {self.accuracy * 100}%\n')

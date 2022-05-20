@@ -20,25 +20,29 @@ class Classifier:
             self.features = len(self.content[0]) - 1 #need to offset by 1 because the first column is class label
             # print(self.k)
             # print(self.features)
+            
+    def reset(self):
+        self.counter = 0
+        self.accuracy = None
 
     def test(self, validatedList): #leave one out validation
         #print('predict the class label.')
-        start = time.time()
-        for i in range(len(self.content)):
+        #start = time.time()
+        for i in range(len(validatedList)): 
         #https://www.thecodingforums.com/threads/convert-scientific-integer-to-normal-integer.336567/ 
-            c_label = int(float(self.content[i][0])) #actual label for item in row i
+            c_label = int(float(self.content[i][0])) #actual label for item in row i #error right here
             # for debugging purposes!
             # print('Loop over i, at the', str(i + 1), 'location') 
             # print('The', str(i + 1), 'th object is in class', str(label))
             
             #initialize both nn_dist and nn_loc to infinity cause we don't know what neighbor is the closest
             #nn_dist is the nearest neighbor distance found so far
-            #nn_loc is to store the index of the nearest neighbor found
+            #nn_loc is to store the index of the nearest neighbor found; technically we don't need this variable
             nn_dist = float('inf') 
             nn_loc = float('inf')
-            for j in range(len(self.content)):
+            for j in range(len(validatedList)):
                 if (i != j): #don't compare itself
-                    dist = self.euclideanDistance(self.content[i], self.content[j])
+                    dist = self.euclideanDistance(validatedList[i], validatedList[j])
                     if (dist < nn_dist): 
                         nn_dist = dist
                         nn_loc = j
@@ -51,14 +55,14 @@ class Classifier:
             if (c_label == nn_label):
                 self.counter += 1
         self.accuracy = self.counter/self.k
-        end = time.time()
-        print(end-start)
+        #end = time.time()
+        #print(end-start)
     
     def euclideanDistance(self, testRow, compareRow):
         #https://www.geeksforgeeks.org/calculate-the-euclidean-distance-using-numpy/ 
         #for n dimensional euclidean distance
         #https://stackoverflow.com/questions/3877209/how-to-convert-an-array-of-strings-to-an-array-of-floats-in-numpy
         #for converting array of str to float
-        sum_sq = np.sum(np.square(np.array(testRow[1:], dtype=float) - np.array(compareRow[1:], dtype=float)))
+        sum_sq = np.sum(np.square(np.array(testRow, dtype=float) - np.array(compareRow, dtype=float)))
         return np.sqrt(sum_sq)
     
