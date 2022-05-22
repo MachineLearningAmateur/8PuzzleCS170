@@ -28,20 +28,21 @@ def main():
     '\t* Backward Elimination\n' + \
     '\t* James\' Special Algorithm\n')
 
-    subset = input('Please choose the features you would like to test: ')
-    classifier = Classifier(fileName)
-    classifier.train()
-    lst = subset.split()
-    lst = map(int, lst)
-    node = Node(set(lst))
-    validator = Validator(node, classifier)
-    validator.validate()
-    print('The accuracy for the subset', node.subset, 'is', str(validator.getAccuracy() * 100) + '%')
+    #Part 2
+    # subset = input('Please choose the features you would like to test: ')
+    # classifier = Classifier(fileName)
+    # classifier.train()
+    # lst = subset.split()
+    # lst = map(int, lst)
+    # node = Node(set(lst))
+    # validator = Validator(node, classifier)
+    # validator.validate()
+    # print('The accuracy for the subset', node.subset, 'is', str(validator.getAccuracy() * 100) + '%')
 
     # algs = GreedyAlgs(int(numFeatures), int(algorithm))
 
-    # algs = GreedyAlgs(fileName, int(algorithm))
-    # algs.begin()
+    algs = GreedyAlgs(fileName, int(algorithm))
+    algs.begin()
 
 if __name__ == '__main__':
     main()
