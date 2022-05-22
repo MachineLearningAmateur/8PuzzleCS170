@@ -1,6 +1,7 @@
 import copy #import copy to use deepcopy since Python arguments are pass by reference
 import numpy as np #imports np for random generator
 import time
+import os
 from Node import Node #imports the Node class
 from Classifier import Classifier
 from Validator import Validator
@@ -23,7 +24,10 @@ class GreedyAlgs:
         self.classifier = Classifier(self.fileName)
         self.classifier.train()
         self.features = self.classifier.features
-
+        if os.path.isfile(self.fileName.replace('.txt', '') + '_trace.txt'):
+            with open(self.fileName.replace('.txt', '') + '_trace.txt', 'r+') as f:
+                    f.truncate(0) # need '0' when using r+
+        
         if self.algorithm == 1:
             self.forward_selection()
         elif self.algorithm == 2:
@@ -134,7 +138,7 @@ class GreedyAlgs:
             f'accuracy of {max(self.bSubsets.keys()) * 100}%')
 
     def trace(self, text, start):
-        with open('results.txt', 'a') as f:
+        with open(self.fileName.replace('.txt', '') + '_trace.txt', 'a') as f:
             if start:
                 end = time.time() - start
                 f.write(text.strip() + ' | step finished in ' + str(end) + ' seconds.' + '\n')

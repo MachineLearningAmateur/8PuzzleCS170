@@ -1,7 +1,7 @@
 
 from GreedyAlgs import GreedyAlgs #imports the GreedyAlgs class
-from Classifier import Classifier
 import os
+
 def main(): 
     print('Welcome to jzhan326\'s Feature Selection Algorithm.')
     #numFeatures = input('Please enter total number of features: ') 
