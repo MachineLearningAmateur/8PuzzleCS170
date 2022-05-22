@@ -1,0 +1,69 @@
+Using feature(s) {1} is 74.0%
+Using feature(s) {2} is 71.0%
+Using feature(s) {3} is 67.0%
+Using feature(s) {4} is 68.0%
+Using feature(s) {5} is 69.0%
+Using feature(s) {6} is 69.0%
+Using feature(s) {7} is 71.0%
+Using feature(s) {8} is 71.0%
+Using feature(s) {9} is 68.0%
+Using feature(s) {10} is 69.0%
+Using feature(s) {11} is 70.0%
+Using feature(s) {12} is 68.0%
+Using feature(s) {13} is 66.0%
+Using feature(s) {14} is 71.0%
+Using feature(s) {15} is 69.0%
+Using feature(s) {16} is 68.0%
+Using feature(s) {17} is 67.0%
+Using feature(s) {18} is 70.0%
+Using feature(s) {19} is 70.0%
+Using feature(s) {20} is 68.0%
+Using feature(s) {21} is 68.0%
+Using feature(s) {22} is 69.0%
+Using feature(s) {23} is 70.0%
+Using feature(s) {24} is 67.0%
+Using feature(s) {25} is 69.0%
+Using feature(s) {26} is 68.0%
+Using feature(s) {27} is 85.0%
+Using feature(s) {28} is 66.0%
+Using feature(s) {29} is 70.0%
+Using feature(s) {30} is 71.0%
+Using feature(s) {31} is 70.0%
+Using feature(s) {32} is 69.0%
+Using feature(s) {33} is 70.0%
+Using feature(s) {34} is 68.0%
+Using feature(s) {35} is 70.0%
+Using feature(s) {36} is 70.0%
+Using feature(s) {37} is 70.0%
+Using feature(s) {38} is 70.0%
+Using feature(s) {39} is 71.0%
+Using feature(s) {40} is 70.0%
+Feature set {40} was best, accuracy is 70.0% | step finished in 286.9521918296814 seconds.
+Using feature(s) {1, 27} is 95.0%
+Using feature(s) {2, 27} is 84.0%
+Using feature(s) {3, 27} is 82.0%
+Using feature(s) {27, 4} is 82.0%
+Using feature(s) {27, 5} is 82.0%
+Using feature(s) {27, 6} is 84.0%
+Using feature(s) {27, 7} is 82.0%
+Using feature(s) {8, 27} is 85.0%
+Using feature(s) {9, 27} is 84.0%
+Using feature(s) {10, 27} is 82.0%
+Using feature(s) {11, 27} is 82.0%
+Using feature(s) {27, 12} is 83.0%
+Using feature(s) {27, 13} is 82.0%
+Using feature(s) {27, 14} is 83.0%
+Using feature(s) {27, 15} is 84.0%
+Using feature(s) {16, 27} is 83.0%
+Using feature(s) {17, 27} is 84.0%
+Using feature(s) {18, 27} is 83.0%
+Using feature(s) {19, 27} is 83.0%
+Using feature(s) {27, 20} is 82.0%
+Using feature(s) {27, 21} is 83.0%
+Using feature(s) {27, 22} is 84.0%
+Using feature(s) {27, 23} is 84.0%
+Using feature(s) {24, 27} is 81.0%
+Using feature(s) {25, 27} is 81.0%
+Using feature(s) {26, 27} is 83.0%
+Using feature(s) {27, 28} is 82.0%
+Using feature(s) {27, 29} is 83.0%

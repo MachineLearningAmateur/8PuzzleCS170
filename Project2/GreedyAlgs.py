@@ -27,7 +27,6 @@ class GreedyAlgs:
         if os.path.isfile(self.fileName.replace('.txt', '') + '_trace.txt'):
             with open(self.fileName.replace('.txt', '') + '_trace.txt', 'r+') as f:
                     f.truncate(0) # need '0' when using r+
-        
         if self.algorithm == 1:
             self.forward_selection()
         elif self.algorithm == 2:
@@ -84,9 +83,9 @@ class GreedyAlgs:
             
         #use max to find the highest accuracy within the keys of bSubsets
         self.trace(f'Finished Search!!! The best feature subset is {self.bSubsets[max(self.bSubsets.keys())]}, which has an ' + \
-            f'accuracy of {max(self.bSubsets.keys()) * 100}%', total)
+            f'accuracy of {max(self.bSubsets.keys())}%', total)
         print(f'Finished Search!!! The best feature subset is {self.bSubsets[max(self.bSubsets.keys())]}, which has an ' + \
-            f'accuracy of {max(self.bSubsets.keys()) * 100}%')
+            f'accuracy of {max(self.bSubsets.keys())}%')
 
     def backward_elimination(self): #backward selection starts with a populated set
         #print('Do backward elimination.')
@@ -133,9 +132,9 @@ class GreedyAlgs:
                 break
             self.bSubsets[bFeature.accuracy] = bFeature.subset #use accuracy to store as key and the value is the best subset for current iteration
         self.trace(f'Finished Search!!! The best feature subset is {self.bSubsets[max(self.bSubsets.keys())]}, which has an ' + \
-            f'accuracy of {max(self.bSubsets.keys()) * 100}%', total)
+            f'accuracy of {max(self.bSubsets.keys())}%', total)
         print(f'Finished Search!!! The best feature subset is {self.bSubsets[max(self.bSubsets.keys())]}, which has an ' + \
-            f'accuracy of {max(self.bSubsets.keys()) * 100}%')
+            f'accuracy of {max(self.bSubsets.keys())}%')
 
     def trace(self, text, start):
         with open(self.fileName.replace('.txt', '') + '_trace.txt', 'a') as f:
