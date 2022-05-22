@@ -39,7 +39,7 @@ class Classifier:
             #nn_dist is the nearest neighbor distance found so far
             #nn_loc is to store the index of the nearest neighbor found; technically we don't need this variable
             nn_dist = float('inf') 
-            nn_loc = float('inf')
+            nn_loc = float('inf') #variable is useless, was used for debugging
             for j in range(len(validatedList)):
                 if (i != j): #don't compare itself
                     dist = self.euclideanDistance(validatedList[i], validatedList[j])
