@@ -54,7 +54,7 @@ class Classifier:
             # print('Its nearest neighbor is', str(nn_loc), 'which is in class', str(nn_label))
             if (c_label == nn_label):
                 self.counter += 1
-        self.accuracy = self.counter/self.k
+        self.accuracy = float(self.counter)/float(self.k)
         #end = time.time()
         #print(end-start)
     
