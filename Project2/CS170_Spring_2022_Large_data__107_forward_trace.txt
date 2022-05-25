@@ -1,0 +1,123 @@
+Default rate accuracy: 86.6%
+Using feature(s) {1} is 77.6%
+Using feature(s) {2} is 75.8%
+Using feature(s) {3} is 75.9%
+Using feature(s) {4} is 75.9%
+Using feature(s) {5} is 74.9%
+Using feature(s) {6} is 77.7%
+Using feature(s) {7} is 75.2%
+Using feature(s) {8} is 77.4%
+Using feature(s) {9} is 78.8%
+Using feature(s) {10} is 76.6%
+Using feature(s) {11} is 78.3%
+Using feature(s) {12} is 77.7%
+Using feature(s) {13} is 77.3%
+Using feature(s) {14} is 76.2%
+Using feature(s) {15} is 78.2%
+Using feature(s) {16} is 78.7%
+Using feature(s) {17} is 81.0%
+Using feature(s) {18} is 78.2%
+Using feature(s) {19} is 76.2%
+Using feature(s) {20} is 75.5%
+Using feature(s) {21} is 75.5%
+Using feature(s) {22} is 76.8%
+Using feature(s) {23} is 75.9%
+Using feature(s) {24} is 76.6%
+Using feature(s) {25} is 76.3%
+Using feature(s) {26} is 76.8%
+Using feature(s) {27} is 75.7%
+Using feature(s) {28} is 77.5%
+Using feature(s) {29} is 83.9%
+Using feature(s) {30} is 76.2%
+Using feature(s) {31} is 75.9%
+Using feature(s) {32} is 75.1%
+Using feature(s) {33} is 77.3%
+Using feature(s) {34} is 76.9%
+Using feature(s) {35} is 76.9%
+Using feature(s) {36} is 78.1%
+Using feature(s) {37} is 75.4%
+Using feature(s) {38} is 77.4%
+Using feature(s) {39} is 76.2%
+Using feature(s) {40} is 78.3%
+Feature set {29} was best, accuracy is 83.9% | step finished in 279.24464893341064 seconds.
+Using feature(s) {1, 29} is 85.2%
+Using feature(s) {2, 29} is 85.8%
+Using feature(s) {3, 29} is 86.8%
+Using feature(s) {4, 29} is 85.5%
+Using feature(s) {5, 29} is 86.3%
+Using feature(s) {29, 6} is 84.3%
+Using feature(s) {29, 7} is 83.9%
+Using feature(s) {8, 29} is 84.2%
+Using feature(s) {9, 29} is 86.9%
+Using feature(s) {10, 29} is 85.5%
+Using feature(s) {11, 29} is 83.7%
+Using feature(s) {12, 29} is 86.5%
+Using feature(s) {13, 29} is 85.3%
+Using feature(s) {29, 14} is 84.3%
+Using feature(s) {29, 15} is 85.2%
+Using feature(s) {16, 29} is 84.9%
+Using feature(s) {17, 29} is 98.8%
+Using feature(s) {18, 29} is 86.4%
+Using feature(s) {19, 29} is 85.4%
+Using feature(s) {20, 29} is 85.8%
+Using feature(s) {21, 29} is 85.0%
+Using feature(s) {29, 22} is 86.0%
+Using feature(s) {29, 23} is 85.3%
+Using feature(s) {24, 29} is 87.0%
+Using feature(s) {25, 29} is 85.2%
+Using feature(s) {26, 29} is 85.4%
+Using feature(s) {27, 29} is 84.7%
+Using feature(s) {28, 29} is 87.2%
+Using feature(s) {29, 30} is 83.8%
+Using feature(s) {29, 31} is 85.0%
+Using feature(s) {32, 29} is 84.3%
+Using feature(s) {33, 29} is 85.1%
+Using feature(s) {34, 29} is 85.6%
+Using feature(s) {35, 29} is 86.2%
+Using feature(s) {36, 29} is 85.1%
+Using feature(s) {37, 29} is 85.4%
+Using feature(s) {29, 38} is 84.5%
+Using feature(s) {29, 39} is 84.1%
+Using feature(s) {40, 29} is 84.5%
+Feature set {17, 29} was best, accuracy is 98.8% | step finished in 297.0561068058014 seconds.
+Using feature(s) {17, 29, 1} is 96.1%
+Using feature(s) {17, 2, 29} is 95.9%
+Using feature(s) {17, 3, 29} is 95.2%
+Using feature(s) {17, 4, 29} is 95.9%
+Using feature(s) {17, 5, 29} is 94.8%
+Using feature(s) {17, 29, 6} is 94.9%
+Using feature(s) {17, 29, 7} is 94.1%
+Using feature(s) {8, 17, 29} is 94.6%
+Using feature(s) {17, 29, 9} is 96.0%
+Using feature(s) {17, 10, 29} is 95.7%
+Using feature(s) {17, 11, 29} is 95.4%
+Using feature(s) {17, 12, 29} is 95.0%
+Using feature(s) {17, 13, 29} is 95.7%
+Using feature(s) {17, 29, 14} is 94.2%
+Using feature(s) {17, 29, 15} is 95.0%
+Using feature(s) {16, 17, 29} is 95.5%
+Using feature(s) {17, 18, 29} is 96.0%
+Using feature(s) {17, 19, 29} is 95.9%
+Using feature(s) {17, 20, 29} is 94.9%
+Using feature(s) {17, 21, 29} is 94.9%
+Using feature(s) {17, 29, 22} is 95.4%
+Using feature(s) {17, 29, 23} is 94.0%
+Using feature(s) {24, 17, 29} is 94.9%
+Using feature(s) {17, 29, 25} is 93.8%
+Using feature(s) {17, 26, 29} is 95.1%
+Using feature(s) {17, 27, 29} is 95.0%
+Using feature(s) {17, 28, 29} is 95.2%
+Using feature(s) {17, 29, 30} is 94.9%
+Using feature(s) {17, 29, 31} is 96.3%
+Using feature(s) {32, 17, 29} is 94.2%
+Using feature(s) {17, 29, 33} is 94.7%
+Using feature(s) {17, 34, 29} is 95.0%
+Using feature(s) {17, 35, 29} is 94.8%
+Using feature(s) {17, 36, 29} is 95.6%
+Using feature(s) {17, 37, 29} is 95.3%
+Using feature(s) {17, 29, 38} is 95.4%
+Using feature(s) {17, 29, 39} is 94.3%
+Using feature(s) {40, 17, 29} is 95.7%
+Feature set {17, 29, 31} was best, accuracy is 96.3% | step finished in 308.8639225959778 seconds.
+(Warning, accuracy has decreased!)
+Finished Search!!! The best feature subset is {17, 29}, which has an accuracy of 98.8% | step finished in 885.1686067581177 seconds.

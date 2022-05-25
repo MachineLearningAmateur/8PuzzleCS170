@@ -1,0 +1,24 @@
+Default rate accuracy: 83.0%
+Using feature(s) {1} is 74.0%
+Using feature(s) {2} is 66.0%
+Using feature(s) {3} is 70.0%
+Using feature(s) {4} is 70.0%
+Using feature(s) {5} is 65.0%
+Using feature(s) {6} is 74.0%
+Using feature(s) {7} is 77.0%
+Using feature(s) {8} is 89.0%
+Using feature(s) {9} is 72.0%
+Using feature(s) {10} is 75.0%
+Feature set {8} was best, accuracy is 89.0% | step finished in 0.6938941478729248 seconds.
+Using feature(s) {8, 1} is 82.0%
+Using feature(s) {8, 2} is 82.0%
+Using feature(s) {8, 3} is 87.0%
+Using feature(s) {8, 4} is 82.0%
+Using feature(s) {8, 5} is 86.0%
+Using feature(s) {8, 6} is 88.0%
+Using feature(s) {8, 7} is 85.0%
+Using feature(s) {8, 9} is 80.0%
+Using feature(s) {8, 10} is 88.0%
+Feature set {8, 6} was best, accuracy is 88.0% | step finished in 0.653649091720581 seconds.
+(Warning, accuracy has decreased!)
+Finished Search!!! The best feature subset is {8}, which has an accuracy of 89.0% | step finished in 1.3536694049835205 seconds.

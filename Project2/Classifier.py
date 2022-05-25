@@ -10,7 +10,8 @@ class Classifier:
         self.k = 0 #k = number of rows
         self.counter = 0 #for correct number of objects classified
         self.accuracy = 0 #accuracy = counter/k
-
+        self.defaultRate = None
+        
     def train(self): #sets up the data
         #print('train and label the data.')
         #https://docs.python.org/3/library/csv.html
@@ -20,7 +21,14 @@ class Classifier:
             self.features = len(self.content[0]) - 1 #need to offset by 1 because the first column is class label
             # print(self.k)
             # print(self.features)
-            
+        default_dict = {}
+        for row in self.content:
+            if row[0] not in default_dict:
+                default_dict[row[0]] = 1
+            else:
+                default_dict[row[0]] += 1
+        self.defaultRate = round(float(max(default_dict.values()))/float(self.k) * 100, 2)
+
     def reset(self):
         self.counter = 0
         self.accuracy = None

@@ -51,6 +51,9 @@ class GreedyAlgs:
     def forward_selection(self): #forward selection starts with an empty set
         # print('Do forward selection.')
         total = time.time() #tracks time for the whole selection
+        print(f'Default rate accuracy: {self.classifier.defaultRate}%')
+        self.trace(f'Default rate accuracy: {self.classifier.defaultRate}%')
+
         for to_iterate in range(self.features): #just need to iterate n times, where n = number of features
             self.bAccuracy = -1
             bFeature = None
@@ -67,7 +70,7 @@ class GreedyAlgs:
                         bFeature = currNode
                         bwSet = subset
             print()
-            self.trace(currNode.displayBest(), start)
+            self.trace(bFeature.displayBest(), start)
             print(bFeature.displayBest())
             self.fSet.add(bwSet)
             decreasedAcc = False 
@@ -136,7 +139,8 @@ class GreedyAlgs:
         print(f'Finished Search!!! The best feature subset is {self.bSubsets[max(self.bSubsets.keys())]}, which has an ' + \
             f'accuracy of {max(self.bSubsets.keys())}%')
 
-    def trace(self, text, start):
+    #pass in a string to be traced/written into a .txt file created based on the name of the input file, the strings are written with the append argument for open. 
+    def trace(self, text, start = None):
         with open(self.fileName.replace('.txt', '') + '_trace.txt', 'a') as f:
             if start:
                 end = time.time() - start
@@ -145,6 +149,6 @@ class GreedyAlgs:
                 f.write(text.strip() + '\n')
             
     def personal_alg(self): #possibly use bi-directional greedy best search?
-        print('personal alg')
+        print('Unfortunately, I will not be implementing a personal algorithm.')
     
     
