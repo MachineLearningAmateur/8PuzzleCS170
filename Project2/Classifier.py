@@ -1,6 +1,8 @@
 import csv
 import time
 import numpy as np
+from typing import List
+import matplotlib.pyplot as plt
 
 class Classifier:
     def __init__(self, file):
@@ -11,7 +13,8 @@ class Classifier:
         self.counter = 0 #for correct number of objects classified
         self.accuracy = 0 #accuracy = counter/k
         self.defaultRate = None
-        
+        self.goodPlot = []
+
     def train(self): #sets up the data
         #print('train and label the data.')
         #https://docs.python.org/3/library/csv.html
@@ -33,7 +36,7 @@ class Classifier:
         self.counter = 0
         self.accuracy = None
 
-    def test(self, validatedList): #leave one out validation
+    def test(self, validatedList, choice=None): #leave one out validation
         #print('predict the class label.')
         #start = time.time()
         for i in range(len(validatedList)): 
@@ -62,6 +65,8 @@ class Classifier:
             # print('Its nearest neighbor is', str(nn_loc), 'which is in class', str(nn_label))
             if (c_label == nn_label):
                 self.counter += 1
+                if choice:
+                    self.goodPlot.append([round(float(validatedList[nn_loc][0]), 2), round(float(validatedList[nn_loc][1]), 2)])
         self.accuracy = float(self.counter)/float(self.k)
         #end = time.time()
         #print(end-start)
@@ -74,3 +79,40 @@ class Classifier:
         sum_sq = np.sum(np.square(np.array(testRow, dtype=float) - np.array(compareRow, dtype=float)))
         return np.sqrt(sum_sq)
     
+    #to be worked on
+    def plotFeatures(self, feature1 : int, feature2 : int):
+        #print(features)
+        print('Plotting graph.')
+        validatedList = []
+
+        for row in range(len(self.content)):
+            tempRow = [] 
+            for feature in [feature1, feature2]:
+                tempRow.append(self.content[row][feature])
+            validatedList.append(tempRow)
+        self.test(validatedList, choice=True)
+        self.reset()
+        print(self.goodPlot)
+        feature1Lst = []
+        feature2Lst = []
+        for row in range(len(self.content)):
+            for col in range(len(self.content[row])):
+                if col == feature1:
+                    feature1Lst.append(round(float(self.content[row][col]), 2))
+                elif col == feature2:
+                    feature2Lst.append(round(float(self.content[row][col]), 2))
+        fig, ax = plt.subplots()
+        fig.tight_layout()
+        ax.set_ylabel('Feature ' + str(feature2))
+        ax.set_xlabel('Feature ' + str(feature1))
+        ax.set_title(self.file.replace('.txt',''))
+
+        good1 = []
+        good2 = []
+        for i in self.goodPlot:
+            good1.append(i[0])
+            good2.append(i[1])
+        plt.plot(good1, good2, 'o', color='red')
+        plt.plot(feature1Lst, feature2Lst, 'o', markerfacecolor='none')
+        plt.show()
+

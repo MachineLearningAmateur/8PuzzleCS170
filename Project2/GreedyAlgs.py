@@ -23,7 +23,10 @@ class GreedyAlgs:
         #set up the classifier by passing in the fileName
         self.classifier = Classifier(self.fileName)
         self.classifier.train()
+        #self.classifier.plotFeatures(17, 29)
         self.features = self.classifier.features
+        # print(self.features) #num of features
+        # print(self.classifier.k) #num of instances
         if os.path.isfile(self.fileName.replace('.txt', '') + '_trace.txt'):
             with open(self.fileName.replace('.txt', '') + '_trace.txt', 'r+') as f:
                     f.truncate(0) # need '0' when using r+
