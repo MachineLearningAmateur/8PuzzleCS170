@@ -13,7 +13,7 @@ class Classifier:
         self.counter = 0 #for correct number of objects classified
         self.accuracy = 0 #accuracy = counter/k
         self.defaultRate = None
-        self.goodPlot = []
+    
 
     def train(self): #sets up the data
         #print('train and label the data.')
@@ -36,7 +36,7 @@ class Classifier:
         self.counter = 0
         self.accuracy = None
 
-    def test(self, validatedList, choice=None): #leave one out validation
+    def test(self, validatedList): #leave one out validation
         #print('predict the class label.')
         #start = time.time()
         for i in range(len(validatedList)): 
@@ -65,8 +65,6 @@ class Classifier:
             # print('Its nearest neighbor is', str(nn_loc), 'which is in class', str(nn_label))
             if (c_label == nn_label):
                 self.counter += 1
-                if choice:
-                    self.goodPlot.append([round(float(validatedList[nn_loc][0]), 2), round(float(validatedList[nn_loc][1]), 2)])
         self.accuracy = float(self.counter)/float(self.k)
         #end = time.time()
         #print(end-start)
@@ -83,24 +81,22 @@ class Classifier:
     def plotFeatures(self, feature1 : int, feature2 : int):
         #print(features)
         print('Plotting graph.')
-        validatedList = []
-
+        Class1feature1Lst = []
+        Class1feature2Lst = []
+        Class2feature1Lst = []
+        Class2feature2Lst = []
         for row in range(len(self.content)):
-            tempRow = [] 
-            for feature in [feature1, feature2]:
-                tempRow.append(self.content[row][feature])
-            validatedList.append(tempRow)
-        self.test(validatedList, choice=True)
-        self.reset()
-        print(self.goodPlot)
-        feature1Lst = []
-        feature2Lst = []
-        for row in range(len(self.content)):
-            for col in range(len(self.content[row])):
-                if col == feature1:
-                    feature1Lst.append(round(float(self.content[row][col]), 2))
-                elif col == feature2:
-                    feature2Lst.append(round(float(self.content[row][col]), 2))
+            currRow = self.content[row]
+            if round(float(currRow[0]), 0) == 1:
+                Class1feature1Lst.append(round(float(currRow[feature1]), 2))
+                Class1feature2Lst.append(round(float(currRow[feature2]), 2))
+            else:
+                Class2feature1Lst.append(round(float(currRow[feature1]), 2))
+                Class2feature2Lst.append(round(float(currRow[feature2]), 2))
+                # if col == feature1:
+                #     feature1Lst.append(round(float(self.content[row][col]), 2))
+                # elif col == feature2:
+                #     feature2Lst.append(round(float(self.content[row][col]), 2))
         fig, ax = plt.subplots()
         fig.tight_layout()
         ax.set_ylabel('Feature ' + str(feature2))
@@ -109,10 +105,8 @@ class Classifier:
 
         good1 = []
         good2 = []
-        for i in self.goodPlot:
-            good1.append(i[0])
-            good2.append(i[1])
-        plt.plot(good1, good2, 'o', color='red')
-        plt.plot(feature1Lst, feature2Lst, 'o', markerfacecolor='none')
+        plt.plot(Class1feature1Lst, Class1feature2Lst, 'o', color='red', markerfacecolor='none', label='Class 1')
+        plt.plot(Class2feature1Lst, Class2feature2Lst, 'o', markerfacecolor='none', label='Class 2')
+        leg = ax.legend()
         plt.show()
 

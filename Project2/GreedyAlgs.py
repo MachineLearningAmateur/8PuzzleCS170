@@ -23,7 +23,11 @@ class GreedyAlgs:
         #set up the classifier by passing in the fileName
         self.classifier = Classifier(self.fileName)
         self.classifier.train()
-        #self.classifier.plotFeatures(17, 29)
+        featureChoice = input('Please choose 2 features to plot: ').split(' ')
+        #print(featureChoice)
+        
+        #will plot the graph for given features
+        self.classifier.plotFeatures(int(featureChoice[0]), int(featureChoice[1]))
         self.features = self.classifier.features
         # print(self.features) #num of features
         # print(self.classifier.k) #num of instances
