@@ -1,5 +1,5 @@
 Using feature(s) {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} is 68.0%
-Feature set {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} was best, accuracy is 68.0% | step finished in 0.10111331939697266 seconds.
+Feature set {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} was best, accuracy is 68.0% | step finished in 0.1118323802947998 seconds.
 Using feature(s) {2, 3, 4, 5, 6, 7, 8, 9, 10} is 71.0%
 Using feature(s) {1, 3, 4, 5, 6, 7, 8, 9, 10} is 62.0%
 Using feature(s) {1, 2, 4, 5, 6, 7, 8, 9, 10} is 73.0%
@@ -10,7 +10,7 @@ Using feature(s) {1, 2, 3, 4, 5, 6, 8, 9, 10} is 62.0%
 Using feature(s) {1, 2, 3, 4, 5, 6, 7, 9, 10} is 72.0%
 Using feature(s) {1, 2, 3, 4, 5, 6, 7, 8, 10} is 67.0%
 Using feature(s) {1, 2, 3, 4, 5, 6, 7, 8, 9} is 72.0%
-Feature set {1, 2, 4, 5, 6, 7, 8, 9, 10} was best, accuracy is 73.0% | step finished in 0.9721717834472656 seconds.
+Feature set {1, 2, 4, 5, 6, 7, 8, 9, 10} was best, accuracy is 73.0% | step finished in 0.9731836318969727 seconds.
 Using feature(s) {2, 4, 5, 6, 7, 8, 9, 10} is 72.0%
 Using feature(s) {1, 4, 5, 6, 7, 8, 9, 10} is 73.0%
 Using feature(s) {1, 2, 5, 6, 7, 8, 9, 10} is 69.0%
@@ -20,16 +20,16 @@ Using feature(s) {1, 2, 4, 5, 6, 8, 9, 10} is 68.0%
 Using feature(s) {1, 2, 4, 5, 6, 7, 9, 10} is 68.0%
 Using feature(s) {1, 2, 4, 5, 6, 7, 8, 10} is 73.0%
 Using feature(s) {1, 2, 4, 5, 6, 7, 8, 9} is 67.0%
-Feature set {1, 2, 4, 5, 7, 8, 9, 10} was best, accuracy is 75.0% | step finished in 0.834263801574707 seconds.
+Feature set {1, 2, 4, 5, 7, 8, 9, 10} was best, accuracy is 75.0% | step finished in 0.8420555591583252 seconds.
 Using feature(s) {2, 4, 5, 7, 8, 9, 10} is 75.0%
 Using feature(s) {1, 4, 5, 7, 8, 9, 10} is 73.0%
 Using feature(s) {1, 2, 5, 7, 8, 9, 10} is 64.0%
-Using feature(s) {1, 2, 4, 7, 8, 9, 10} is 57.99999999999999%
+Using feature(s) {1, 2, 4, 7, 8, 9, 10} is 58.0%
 Using feature(s) {1, 2, 4, 5, 8, 9, 10} is 71.0%
 Using feature(s) {1, 2, 4, 5, 7, 9, 10} is 78.0%
 Using feature(s) {1, 2, 4, 5, 7, 8, 10} is 77.0%
 Using feature(s) {1, 2, 4, 5, 7, 8, 9} is 71.0%
-Feature set {1, 2, 4, 5, 7, 9, 10} was best, accuracy is 78.0% | step finished in 0.7087950706481934 seconds.
+Feature set {1, 2, 4, 5, 7, 9, 10} was best, accuracy is 78.0% | step finished in 0.7310316562652588 seconds.
 Using feature(s) {2, 4, 5, 7, 9, 10} is 76.0%
 Using feature(s) {1, 4, 5, 7, 9, 10} is 73.0%
 Using feature(s) {1, 2, 5, 7, 9, 10} is 67.0%
@@ -37,19 +37,19 @@ Using feature(s) {1, 2, 4, 7, 9, 10} is 61.0%
 Using feature(s) {1, 2, 4, 5, 9, 10} is 75.0%
 Using feature(s) {1, 2, 4, 5, 7, 10} is 79.0%
 Using feature(s) {1, 2, 4, 5, 7, 9} is 76.0%
-Feature set {1, 2, 4, 5, 7, 10} was best, accuracy is 79.0% | step finished in 0.6008644104003906 seconds.
+Feature set {1, 2, 4, 5, 7, 10} was best, accuracy is 79.0% | step finished in 0.6060347557067871 seconds.
 Using feature(s) {2, 4, 5, 7, 10} is 83.0%
 Using feature(s) {1, 4, 5, 7, 10} is 71.0%
 Using feature(s) {1, 2, 5, 7, 10} is 75.0%
 Using feature(s) {1, 2, 4, 7, 10} is 60.0%
 Using feature(s) {1, 2, 4, 5, 10} is 75.0%
 Using feature(s) {1, 2, 4, 5, 7} is 77.0%
-Feature set {2, 4, 5, 7, 10} was best, accuracy is 83.0% | step finished in 0.5109922885894775 seconds.
+Feature set {2, 4, 5, 7, 10} was best, accuracy is 83.0% | step finished in 0.49888110160827637 seconds.
 Using feature(s) {4, 5, 7, 10} is 79.0%
 Using feature(s) {2, 5, 7, 10} is 81.0%
 Using feature(s) {2, 4, 7, 10} is 71.0%
 Using feature(s) {2, 4, 5, 10} is 76.0%
 Using feature(s) {2, 4, 5, 7} is 76.0%
-Feature set {2, 5, 7, 10} was best, accuracy is 81.0% | step finished in 0.39845967292785645 seconds.
+Feature set {2, 5, 7, 10} was best, accuracy is 81.0% | step finished in 0.40588855743408203 seconds.
 (Warning, accuracy has decreased!)
-Finished Search!!! The best feature subset is {2, 4, 5, 7, 10}, which has an accuracy of 83.0% | step finished in 4.132670640945435 seconds.
+Finished Search!!! The best feature subset is {2, 4, 5, 7, 10}, which has an accuracy of 83.0% | step finished in 4.175168752670288 seconds.
